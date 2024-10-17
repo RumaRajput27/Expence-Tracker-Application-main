@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses Management</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS -->
+</head>
+<body>
+    <h1>Expenses Management</h1>
+
+    <!-- Form to Add or Edit an Expense -->
+    <form id="expenseForm">
+        <input type="hidden" id="expenseId"> <!-- Hidden field to store expense ID for editing -->
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required><br>
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required><br>
+
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required><br>
+
+        <button type="submit" id="submitButton">Add Expense</button>
+    </form>
+
+    <h2>Expenses List</h2>
+    <table id="expensesTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Amount</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be dynamically inserted here -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
